@@ -130,7 +130,7 @@ class AccountBankStatementImport(models.TransientModel):
 
         for lote in arquivo.lotes:
             for evento in lote.eventos:
-                valor = evento.valor_lancamento
+                valor = evento.valor_titulo
                 # Apenas liquidação  (Sicoob:6)
                 if evento.servico_codigo_movimento in (6, ):
                     valor_total += valor
